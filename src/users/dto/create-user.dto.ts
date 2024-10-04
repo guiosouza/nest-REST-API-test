@@ -8,9 +8,9 @@ export class CreateUserDto {
   @IsEmail()
   email: string;
 
-  @IsEnum(['DIAMONG_DOG', 'OUTER_HEAVEN', 'FOX_HOUND', 'BIG_BOSS'], {
+  @IsEnum(['DIAMOND_DOG', 'OUTER_HEAVEN', 'FOX_HOUND', 'BIG_BOSS'], {
     message:
-      'Valid role required (DIAMONG_DOG, OUTER_HEAVEN, FOX_HOUND, BIG_BOSS)',
+      'Valid role required (DIAMOND_DOG, OUTER_HEAVEN, FOX_HOUND, BIG_BOSS)',
   })
-  role: 'DIAMONG_DOG' | 'OUTER_HEAVEN' | 'FOX_HOUND' | 'BIG_BOSS';
+  role: 'DIAMOND_DOG' | 'OUTER_HEAVEN' | 'FOX_HOUND' | 'BIG_BOSS';
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { Prisma, Role } from '@prisma/client';
 import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
@@ -12,9 +12,7 @@ export class SoldiersService {
     });
   }
 
-  async findAll(
-    role?: 'DIAMONG_DOG' | 'OUTER_HEAVEN' | 'FOX_HOUND' | 'BIG_BOSS',
-  ) {
+  async findAll(role?: Role) {
     if (role) {
       return this.databaseService.soldier.findMany({
         where: {

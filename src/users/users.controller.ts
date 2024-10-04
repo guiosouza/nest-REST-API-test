@@ -20,7 +20,7 @@ export class UsersController {
   @Get()
   findAll(
     @Query('role')
-    role?: 'DIAMONG_DOG' | 'OUTER_HEAVEN' | 'FOX_HOUND' | 'BIG_BOSS',
+    role?: 'DIAMOND_DOG' | 'OUTER_HEAVEN' | 'FOX_HOUND' | 'BIG_BOSS',
   ) {
     return this.usersService.findAll(role);
   }

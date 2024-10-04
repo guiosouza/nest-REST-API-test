@@ -22,7 +22,7 @@ export class UsersService {
       id: 3,
       name: 'Kazuhira Miller',
       email: 'miller@diamond.dog',
-      role: 'DIAMONG_DOG',
+      role: 'DIAMOND_DOG',
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ export class UsersService {
     },
   ];
 
-  findAll(role?: 'DIAMONG_DOG' | 'OUTER_HEAVEN' | 'FOX_HOUND' | 'BIG_BOSS') {
+  findAll(role?: 'DIAMOND_DOG' | 'OUTER_HEAVEN' | 'FOX_HOUND' | 'BIG_BOSS') {
     if (role) {
       const rolesArray = this.users.filter((user) => user.role === role);
 

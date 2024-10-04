@@ -25,7 +25,7 @@ model Soldier {
 }
 
 enum Role {
-  DIAMONG_DOG
+  DIAMOND_DOG
   OUTER_HEAVEN
   FOX_HOUND
   BIG_BOSS

@@ -9,7 +9,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { SoldiersService } from './soldiers.service';
-import { Prisma } from '@prisma/client';
+import { Prisma, Role } from '@prisma/client';
 
 @Controller('soldiers')
 export class SoldiersController {
@@ -21,10 +21,7 @@ export class SoldiersController {
   }
 
   @Get()
-  findAll(
-    @Query('role')
-    role?: 'DIAMONG_DOG' | 'OUTER_HEAVEN' | 'FOX_HOUND' | 'BIG_BOSS',
-  ) {
+  findAll(@Query('role') role?: Role) {  // Usando o tipo Role do Prisma
     return this.soldiersService.findAll(role);
   }
 
